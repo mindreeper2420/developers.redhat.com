@@ -1,11 +1,11 @@
 templates = ["""
-<!-- START OF RH UNIVERSAL NAV -->
-<div class="rhd-l-rh-universal">
+<!-- START OF LIGHT RH UNIVERSAL NAV
+<div class="rhd-l-rh-universal light">
   <div class="pf-l-flex rhd-c-nav--rh-universal">
-    <div class="pf-l-flex pf-m-grow pf-u-align-self-center">
+    <div class="pf-l-flex pf-m-grow rhd-c-nav--rh-universal-wrapper">
       <nav class="pf-c-nav pf-m-start pf-m-end rhd-c-nav--rh-universal-links" aria-label="Local">
         <ul class="pf-c-nav__tertiary-list">
-          <li class="pf-c-nav__item">
+          <li class="pf-c-nav__item pf-u-mr-0">
             <a href="#" class="pf-c-nav__link">
               <img class="pf-c-brand" alt="Red Hat Logo" src="https://developers.redhat.com/themes/custom/rhdp/images/branding/RHLogo_white.svg">
             </a>
@@ -47,13 +47,42 @@ templates = ["""
       <nav class="pf-c-nav" aria-label="Local">
         <ul class="pf-c-nav__tertiary-list">
           <li class="pf-c-nav__item pf-u-mr-0 login" style="display:none;">
-            <a href="#" class="pf-c-nav__link">
-              <span class="icon"><i class="fas fa-user"></i></span>Log In
+            <a href="#" class="pf-c-nav__link pf-u-text-align-center">
+              <span class="icon"><i class="fas fa-user"></i></span>
+              <div>Log In</div>
             </a>
           </li>
-          <li class="pf-c-nav__item pf-u-mr-0 logged-in">
-            <a href="#" class="pf-c-nav__link">
-              <span class="icon"><i class="fas fa-user"></i></span>John Smith<span class="icon"><i class="fal fa-angle-down"></i></span>
+          <li class="pf-c-nav__item">
+            <a href="#" class="pf-c-nav__link pf-u-text-align-center pf-m-current">
+              <span class="icon"><i class="far fa-globe-americas"></i></span>
+              <div>English</div>
+            </a>
+            <ul>
+              <h2>Select a language</h2>
+              <li>
+                <a href="#">English</a>
+              </li>
+              <li>
+                <a href="#">Français</a>
+              </li>
+            </ul>
+          </li>
+          <li class="pf-c-nav__item">
+            <a href="#" class="pf-c-nav__link pf-u-text-align-center">
+              <span class="icon"><i class="fas fa-search"></i></span>
+              <div>Search</div>
+            </a>
+            <ul>
+              <li>
+                <input type="search" placeholder="Enter your search term">
+                <button class="pf-c-button pf-m-primary">Search</button>
+              </li>
+            </ul>
+          </li>
+          <li class="pf-c-nav__item logged-in">
+            <a href="#" class="pf-c-nav__link pf-u-text-align-center">
+              <span class="icon"><i class="fas fa-user"></i></span>
+              <div>Username</div>
             </a>
             <ul>
               <li>
@@ -64,13 +93,184 @@ templates = ["""
               </li>
             </ul>
           </li>
+          <li class="pf-c-nav__item logged-in">
+            <a href="#" class="pf-c-nav__link pf-u-text-align-center">
+              <span class="icon"><i class="fas fa-th"></i></span>
+              <div>Websites</div>
+            </a>
+            <ul>
+              <li>
+                <a href="#">Other Red Hat websites</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
   </div>
 </div>
-<!-- END OF RH UNIVERSAL NAV -->
-<!-- START OF RHD  NAV -->
+ END OF LIGHT RH UNIVERSAL NAV -->
+
+<!-- START OF NEW RHD NAV -->
+<nav class="rhd-l-rhd-universal">
+  <div class="pf-l-flex rhd-c-nav--rhd-universal">
+    <div class="pf-l-flex pf-m-grow rhd-c-nav--rhd-universal-wrapper">
+      <nav class="pf-c-nav pf-m-start pf-m-end rhd-c-nav--rhd-universal-links" aria-label="Local">
+        <ul class="pf-c-nav__tertiary-list">
+          <li class="pf-c-nav__item pf-u-mr-0">
+            <a href="#" class="pf-c-nav__link">
+              <img class="pf-c-brand" src="../../img/NewRHDFullLogo_color_white-wordmark.svg" alt="Red Hat Developer logo">
+            </a>
+          </li>
+          <li class="pf-c-nav__item">
+            <a href="#" class="pf-c-nav__link">
+              Topics
+            </a>
+            <ul class="pf-c-nav__item-mega-menu-content">
+              <li>
+                <h3>Developer topics</h3>
+                <p>Access to all Insights and news on all Red Hat developer tools, platforms and more.</p>
+                <button class="pf-c-button pf-m-heavy" type="button" aria-label="View all topics">View all topics</button>
+              </li>
+              <li>
+                <h3>Primary topics</h3>
+                <div class="pf-l-grid">
+                  <div class="pf-l-grid__item pf-m-6-col">Kubernetes</div>
+                  <div class="pf-l-grid__item pf-m-6-col">Java</div>
+                  <div class="pf-l-grid__item pf-m-6-col">DevOps</div>
+                  <div class="pf-l-grid__item pf-m-6-col">Linux</div>
+                  <div class="pf-l-grid__item pf-m-6-col">Istio Service Mesh</div>
+                  <div class="pf-l-grid__item pf-m-6-col">Microservices</div>
+                  <div class="pf-l-grid__item pf-m-6-col">Kubernetes</div>
+                  <div class="pf-l-grid__item pf-m-6-col">Java</div>
+                  <div class="pf-l-grid__item pf-m-6-col">DevOps</div>
+                  <div class="pf-l-grid__item pf-m-6-col">Linux</div>
+                  <div class="pf-l-grid__item pf-m-6-col">Istio Service Mesh</div>
+                  <div class="pf-l-grid__item pf-m-6-col">Microservices</div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="pf-c-nav__item">
+            <a href="#" class="pf-c-nav__link pf-m-current">
+              Build
+            </a>
+          </li>
+          <li class="pf-c-nav__item">
+            <a href="#" class="pf-c-nav__link">
+              Training
+            </a>
+          </li>
+          <li class="pf-c-nav__item">
+            <a href="#" class="pf-c-nav__link">
+              Tools
+            </a>
+          </li>
+          <li class="pf-c-nav__item">
+            <a href="#" class="pf-c-nav__link">
+              Products
+            </a>
+          </li>
+          <li class="pf-c-nav__item">
+            <a href="#" class="pf-c-nav__link">
+              Events
+            </a>
+          </li>
+          <li class="pf-c-nav__item">
+            <a href="#" class="pf-c-nav__link">
+              Contribute
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="pf-l-flex rhd-c-nav--rhd-universal-login">
+      <nav class="pf-c-nav" aria-label="Local">
+        <ul class="pf-c-nav__tertiary-list">
+          <li class="pf-c-nav__item pf-u-mr-0 login" style="display:none;">
+            <a href="#" class="pf-c-nav__link pf-u-text-align-center">
+              <span class="icon"><i class="fal fa-user fa-lg"></i></span>
+              <span>Log In</span>
+            </a>
+          </li>
+          <li class="pf-c-nav__item">
+            <a href="#" class="pf-c-nav__link pf-u-text-align-center">
+              <span class="icon"><i class="fal fa-search fa-lg"></i></span>
+              <span>Search</span>
+            </a>
+            <ul>
+              <li>
+                <input type="search" placeholder="Enter your search term">
+                <button class="pf-c-button pf-m-primary">Search</button>
+              </li>
+            </ul>
+          </li>
+          <li class="pf-c-nav__item logged-in">
+            <a href="#" class="pf-c-nav__link pf-u-text-align-center">
+              <span class="icon"><i class="fal fa-user fa-lg"></i></span>
+              <span>Log in</span>
+            </a>
+            <ul>
+              <li>
+                <a href="#">Account Info</a>
+              </li>
+              <li>
+                <a href="#">Log Out</a>
+              </li>
+            </ul>
+          </li>
+          <li class="pf-c-nav__item logged-in">
+            <a href="#" class="pf-c-nav__link pf-u-text-align-center">
+              <span class="icon"><i class="fas fa-th fa-lg"></i></span>
+              <span>Websites &amp; apps</span>
+            </a>
+            <ul>
+              <li>
+                <a href="#">Other Red Hat websites</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</nav>
+<nav class="rhd-l-rhd-trending">
+  <div class="pf-c-nav rhd-c-nav--rhd-trending" aria-label="Local">
+    <button class="pf-c-nav__scroll-button" aria-label="Scroll left">
+      <i class="fas fa-angle-left" aria-hidden="true"></i>
+    </button>
+    <ul class="pf-c-nav__tertiary-list">
+      <li class="pf-c-nav__item">
+        <a href="#" class="pf-c-nav__link">Trending</a>
+      </li>
+      <li class="pf-c-nav__item">
+        <a href="#" class="pf-c-nav__link">OpenShift 4.2:new</a>
+      </li>
+      <li class="pf-c-nav__item">
+        <a href="#" class="pf-c-nav__link">Quarkus 0.5</a>
+      </li>
+      <li class="pf-c-nav__item">
+        <a href="#" class="pf-c-nav__link">Red Hat build of OpenJDK</a>
+      </li>
+      <li class="pf-c-nav__item">
+        <a href="#" class="pf-c-nav__link">RHEL 8</a>
+      </li>
+      <li class="pf-c-nav__item">
+        <a href="#" class="pf-c-nav__link">Python 3 install</a>
+      </li>
+      <li class="pf-c-nav__item">
+        <a href="#" class="pf-c-nav__link">DevNation Live</a>
+      </li>
+    </ul>
+    <button class="pf-c-nav__scroll-button" aria-label="Scroll right">
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
+    </button>
+  </div>
+</nav>
+<!-- END OF NEW RHD NAV -->
+
+<!-- START OF OLD RHD  NAV
 <div class="rhd-c-nav pf-l-flex">
   <div class="pf-l-flex pf-m-grow">
     <img class="pf-c-brand" src="https://developers.redhat.com/themes/custom/rhdp/logo.svg" alt="Red Hat Developer logo">
@@ -98,7 +298,7 @@ templates = ["""
         </li>
       </ul>
     </nav>
-    <!-- START OF MOBILE RHD NAV -->
+    -- START OF MOBILE RHD NAV --
     <div class="rhd-c-nav-mobile">
       <label for="toggle" class="hamburger">Menu <i class="far fa-bars"></i></label>
       <input type="checkbox" id="toggle">
@@ -145,11 +345,12 @@ templates = ["""
 
       </nav>
     </div>
-    <!-- END OF MOBILE RHD NAV -->
+    -- END OF MOBILE RHD NAV --
   </div>
 </div>
-<!-- END OF RHD NAV -->
-<!-- START OF TOPICS NAV -->
+ END OF OLD RHD NAV -->
+
+<!-- START OF TOPICS NAV
 <div class="pf-c-nav rhd-l-topics">
   <button class="pf-c-nav__scroll-button" aria-label="Scroll left">
     <i class="fas fa-angle-left" aria-hidden="true"></i>
@@ -222,5 +423,5 @@ templates = ["""
     <i class="fas fa-angle-right" aria-hidden="true"></i>
   </button>
 </div>
-<!-- END OF TOPICS NAV -->
+ END OF TOPICS NAV -->
 """]
